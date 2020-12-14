@@ -10,7 +10,7 @@ function get_CURL($url)
   return json_decode($result, true);
 }
 
-$result = get_CURL('https://www.googleapis.com/youtube/v3/channels?part=snippet,statistics&id=UCc34iDQynLhJAuD2b61AfIA&key=AIzaSyB6Uyw3DzkZTTaOfyOObTO5wavvbIuIq1c');
+$result = get_CURL('https://www.googleapis.com/youtube/v3/channels?part=snippet,statistics&id=UCwcmKQPTZZWJY10jS1xf2Og&key=AIzaSyB6Uyw3DzkZTTaOfyOObTO5wavvbIuIq1c');
 
 
 $youtubeProfilePic = $result['items'][0]['snippet']['thumbnails']['medium']['url'];
@@ -18,7 +18,7 @@ $channelName = $result['items'][0]['snippet']['title'];
 $subscriber = $result['items'][0]['statistics']['subscriberCount'];
 
 // Latest Video
-$urlLatestVideo = 'https://www.googleapis.com/youtube/v3/search?key=AIzaSyB6Uyw3DzkZTTaOfyOObTO5wavvbIuIq1c&channelId=UCc34iDQynLhJAuD2b61AfIA&maxResults=1&order=date&part=snippet';
+$urlLatestVideo = 'https://www.googleapis.com/youtube/v3/search?key=AIzaSyB6Uyw3DzkZTTaOfyOObTO5wavvbIuIq1c&channelId=UCwcmKQPTZZWJY10jS1xf2Og&maxResults=3&order=date&part=snippet';
 $result = get_CURL($urlLatestVideo);
 $urlLatestVideo = $result['items'][0]['id']['videoId'];
 
@@ -45,7 +45,7 @@ $urlLatestVideo = $result['items'][0]['id']['videoId'];
 
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
     <div class="container">
-      <a class="navbar-brand" href="#home">Bang Bot ID</a>
+      <a class="navbar-brand" href="#home">Hadi Nasution</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -69,9 +69,9 @@ $urlLatestVideo = $result['items'][0]['id']['videoId'];
   <div class="jumbotron" id="home">
     <div class="container">
       <div class="text-center">
-        <img src="img/profile1.png" class="rounded-circle img-thumbnail">
-        <h1 class="display-4">M Syamsul Hadi Rahman</h1>
-        <h3 class="lead">Lecturer | Programmer | Youtuber</h3>
+        <img src="img/myself.png" class="rounded-circle img-thumbnail">
+        <h1 class="display-4">Ichbal Hadi Nasution</h1>
+        <h3 class="lead">Loves Code and Design | Youtuber</h3>
       </div>
     </div>
   </div>
@@ -116,7 +116,7 @@ $urlLatestVideo = $result['items'][0]['id']['videoId'];
               <h5><?= $channelName; ?></h5>
               <h6>
                 <p><?= $subscriber; ?> Subscribers.</p>
-                <div class="g-ytsubscribe" data-channelid="UCc34iDQynLhJAuD2b61AfIA" data-layout="default" data-count="default"></div>
+                <div class="g-ytsubscribe" data-channelid="UCwcmKQPTZZWJY10jS1xf2Og" data-layout="default" data-count="default"></div>
               </h6>
             </div>
           </div>
@@ -124,34 +124,6 @@ $urlLatestVideo = $result['items'][0]['id']['videoId'];
             <div class="col">
               <div class="embed-responsive embed-responsive-16by9">
                 <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/<?= $urlLatestVideo; ?>rel=0" allowfullscreen></iframe>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-5">
-          <div class="row">
-            <div class="col-md-4">
-              <img src="img/profile1.png" width="200" class="rounded-circle img-thumbnail">
-            </div>
-            <div class="col-md-8">
-              <h5>M Syasmsul Hadi R</h5>
-              <h6>
-                <p>1008 Followers.</p>
-              </h6>
-            </div>
-            <div>
-              <div class="row mt-3 pb-3">
-                <div class="col">
-                  <div class="ig-thumbnail">
-                    <img src="img/thumbs/4.png" width="200px">
-                  </div>
-                  <div class="ig-thumbnail">
-                    <img src="img/thumbs/3.png" width="200px">
-                  </div>
-                  <div class="ig-thumbnail">
-                    <img src="img/thumbs/2.png" width="200px">
-                  </div>
-                </div>
               </div>
             </div>
           </div>
